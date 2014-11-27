@@ -1,0 +1,15 @@
+{
+    "database": {
+        "host": "121.40.189.233",
+        "username":"root",
+        "password":"123456",
+        "name":"person"
+    },
+    "application": {
+        "controllersDir": "app/controllers/",
+        "modelsDir" : "app/models/",
+        "viewsDir" : "app/views/",
+        "libraryDir" : "app/library/",
+        "logDir" : "logs/"
+    }
+}
