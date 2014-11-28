@@ -1,5 +1,5 @@
 <?php
-class ControllerBase extends \Phalcon\Mvc\Controller
+class BaseController extends \Phalcon\Mvc\Controller
 {
     /**
      * 程序日志

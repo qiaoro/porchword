@@ -1,16 +1,15 @@
 <?php
 include_once (REALPATH."/app/library/BaseController.php");
-class IndexController extends BaseController
+class TestController extends BaseController
 {
 
     public function indexAction()
     {
         echo phpinfo();
         $this ->view ->disable();
-        $this ->log('goto index');
+        $this ->log('goto test');
     }
     public function personAction(){
-    	$this ->view->start()->render('index', 'person')->finish();
         $this ->log('-goto person-');
     }
 
