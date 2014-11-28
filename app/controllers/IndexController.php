@@ -1,11 +1,14 @@
 <?php
-class IndexController extends \Phalcon\Mvc\Controller
+include_once (REALPATH."/app/library/BaseController.php");
+class IndexController extends BaseController
 {
 
     public function indexAction()
     {
-        echo "<h1>Hello!</h1>";
-         <?php use Phalcon\Tag; ?>
+        $this ->log('goto index');
+    }
+    public function personAction(){
+        $this ->log('-goto person-');
     }
 
 }
