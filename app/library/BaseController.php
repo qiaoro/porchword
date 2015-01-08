@@ -1,4 +1,5 @@
 <?php
+include_once REALPATH . 'config/Ini.config.php';
 class BaseController extends \Phalcon\Mvc\Controller
 {
     /**

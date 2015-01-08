@@ -29,7 +29,7 @@ try {
     $di->set('view', function() use($config){   // 传递变量$config 在闭包中访问
         $view = new \Phalcon\Mvc\View();
         $view->setViewsDir(REALPATH . $config ->application ->viewsDir);
-        $view ->disableLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
+        // $view ->disableLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
         return $view;
     });
     //Setup a base URI so that all generated URIs include the "tutorial" folder

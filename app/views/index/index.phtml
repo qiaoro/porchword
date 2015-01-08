@@ -1,2 +1,55 @@
-<?php
-echo 'hello';
+<div class="am-alert am-alert-success" data-am-alert>
+  <button type="button" class="am-close">&times;</button>
+  <p>梦想还是要有的，万一实现了呢。</p>
+</div>
+<div>
+    <div class="am-g">
+        <div class="am-u-md-3 am-u-sm-centered" style="background-color: #eee; height: 220px;">
+        <div style="text-align: center;">
+            <p>登录个人账号</p>
+        </div>
+        <iframe src="" name="dispalylogin" id="dispalylogin" style="display: none;" frameborder="0"></iframe>
+        <form target="dispalylogin" class="am-form" action="Indexdb/login" method="post">
+            <fieldset class="am-form-set">
+                <input name="username" id="username" type="email" placeholder="输入你的邮箱、账号">
+                <input name="userpassword" id="userpassword" type="password" placeholder="输入你的密码">
+            </fieldset>
+            <!-- <a style="" href="javascript: void(0)"><small>忘记密码</small></a> -->
+            <button type="submit" class="am-btn am-btn-secondary am-round am-btn-block">登录</button>
+            <a style="position: absolute;right: 0;" href="javascript: $('#myModal').modal('open');"><small>立即注册</small></a>
+        </form>
+      </div>
+    </div>
+</div>
+
+<div class="am-modal am-modal-no-btn" tabindex="-1" id="myModal">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd">注册账号
+      <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+    </div>
+    <div class="am-modal-bd">
+        <div class="am-g">
+            <div class="am-u-md-8 am-u-sm-centered">
+                <form target="dispalylogin" class="am-form" action="indexdb/passport" method="post">
+                    <fieldset class="am-form-set">
+                        <input type="email" placeholder="填下邮箱">
+                        <input type="password" placeholder="设个密码">
+                    </fieldset>
+                    <button type="submit" class="am-btn am-btn-primary am-round am-btn-block">注册个账号</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<script>
+    $(function(){
+        $("#dispalylogin").on("load",function(){
+            //加载完成，需要执行的代码
+            var htmlStr = $("#dispalylogin").contents().find('body').html().trim()
+            if( htmlStr.length > 0 ){
+                publicAlert(htmlStr);
+            }
+        });
+    });
+</script>
